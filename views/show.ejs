@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+
+</head>
+<body>
+    <div class="p-10 main w-full min-h-screen text-white bg-zinc-800">
+        <form action="/delete" method="post">
+            <a class="text-blue-400 text-2xl hover:text-blue-600" href="/">Go back to home</a>
+
+            <!-- file edit -->
+             <button type="submit" name="edit file">
+                
+             </button>
+
+            <!-- Send filename as hidden input -->
+            <input type="hidden" name="filename" value="<%= filename %>">
+
+            <button type="submit" title="Delete file">
+                <i class="ri-delete-bin-5-line text-red-500 px-5 text-2xl cursor-pointer hover:text-red-600"></i>
+            </button>
+
+        </form>
+        <h1 class="text-3xl tracking-tighter mt-10"><%= filename %></h1>
+<p class="text-xl mt-2"><%= filedata %></p>
+        
+    </div>
+</body>
+</html>
